@@ -168,18 +168,11 @@ The workbook contains `V01` to `V17` on the `Validation` sheet. These checks cov
 - The workbook package currently does not include native Excel `dataValidation` dropdown rules or sheet protection
 
 ## Screenshots
+<img width="661" height="532" alt="dash" src="https://github.com/user-attachments/assets/7b510352-f765-4c7a-a2ca-0c5fedc41bc8" />
 
-Add screenshots under `docs/images/` and reference them here.
+<img width="1215" height="367" alt="tb input" src="https://github.com/user-attachments/assets/3d4a9ec6-618f-4d7e-b136-5dc3070a3b42" />
 
-Recommended placeholders:
+<img width="584" height="262" alt="validation" src="https://github.com/user-attachments/assets/55f2b55a-46f2-49c8-8d2f-a0377f597663" />
 
-- `docs/images/dashboard.png`
-- `docs/images/validation.png`
-- `docs/images/tb_input.png`
-- `docs/images/output_pl.png`
 
-Example markdown:
-
-```md
-![Dashboard](docs/images/dashboard.png)
 ```
