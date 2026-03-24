@@ -39,7 +39,7 @@ The model is designed around:
 - traceable links between sheets
 - validation-driven control before outputs are used
 
-### Simple Explanation (Noob Version)
+### Simple Explanation 
 
 Think of the workbook as a controlled pipeline:
 
@@ -119,7 +119,7 @@ Important structural notes:
 - row `25` is part of the active calculation range and is already used in the delivered file
 - add new accounts on the next blank active row, typically from row `26` onward
 
-### Simple Explanation (Noob Version)
+### Simple Explanation 
 
 `TB_Input` is where you type the raw balances for each company.
 
@@ -187,7 +187,7 @@ This means all accounts beginning with `110` are aggregated into the same target
 
 The mapping sheets (`Mapping_BS`, `Mapping_PL`, `Mapping_CF`) document the mapping structure. The live consolidation engine uses explicit formula logic aligned to that design.
 
-### Simple Explanation (Noob Version)
+### Simple Explanation 
 
 The first three digits are the model's routing code.
 
@@ -247,7 +247,7 @@ Examples:
 - receivable and payable movements come from `Consolidation_BS`
 - closing cash is reconciled back to the consolidated BS cash line
 
-### Simple Explanation (Noob Version)
+### Simple Explanation 
 
 The consolidation sheets do three things:
 
@@ -307,7 +307,7 @@ This makes elimination logic traceable:
 
 `IC_Transactions -> Eliminations -> Consolidation_*`
 
-### Simple Explanation (Noob Version)
+### Simple Explanation 
 
 When one group company trades with another group company, the group as a whole has not made money from an outside party yet.
 
@@ -360,7 +360,7 @@ The output sheets present:
 
 In the current workbook, the prior-period comparison columns are structurally present but formula-set to `0`.
 
-### Simple Explanation (Noob Version)
+### Simple Explanation 
 
 The output sheets are the clean report pages.
 
@@ -406,7 +406,7 @@ Important note on the current workbook:
 - cells for current period, comparison period, display mode, and reporting currency are visible
 - however, in this file version those cells are informational and are not active calculation drivers
 
-### Simple Explanation (Noob Version)
+### Simple Explanation 
 
 The dashboard is the front page.
 
@@ -498,7 +498,7 @@ This is the main control that detects if someone pasted over formulas in critica
 
 This means the model will fail if users type data below the supported bounded range.
 
-### Simple Explanation (Noob Version)
+### Simple Explanation 
 
 The validation sheet is the workbook's internal audit list.
 
@@ -536,7 +536,7 @@ The most common user errors in this workbook are:
 | Overwriting formulas in helper or output cells | Breaks traceability | Enter data only in intended input cells |
 | Editing elimination line codes manually | Misroutes eliminations | Treat `Eliminations` as a controlled sheet |
 
-### Simple Explanation (Noob Version)
+### Simple Explanation 
 
 Most issues happen when users type in the wrong place or assume the model will "figure it out" automatically.
 
@@ -576,7 +576,7 @@ When the model detects an issue:
 | `V16` | Check whether formulas were overwritten |
 | `V17` | Check for data entered below row `200` |
 
-### Simple Explanation (Noob Version)
+### Simple Explanation 
 
 The model does not usually fail quietly anymore.
 
@@ -635,7 +635,7 @@ If the prefix does not already exist in the live model:
 - the account will not map to a correct statement line
 - model logic must be updated in a controlled way
 
-### Simple Explanation (Noob Version)
+### Simple Explanation 
 
 If the first three digits already exist, the model usually knows where to put the new account.
 
@@ -685,7 +685,7 @@ Dashboard
 - If the elimination number is wrong, inspect `IC_Transactions` and `Eliminations`
 - If the issue is structural, check `V16` and `V17`
 
-### Simple Explanation (Noob Version)
+### Simple Explanation 
 
 Do not jump randomly between sheets.
 
@@ -728,7 +728,7 @@ Follow these operating rules:
 - If a new prefix is unavoidable, treat it as a model change request
 - Use `IC_Transactions` as the source of truth for intercompany eliminations
 
-### Simple Explanation (Noob Version)
+### Simple Explanation 
 
 Use the workbook like a controlled system, not like a blank spreadsheet.
 
